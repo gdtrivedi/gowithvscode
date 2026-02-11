@@ -9,7 +9,7 @@ import (
 func main() {
 	s := &Solution{}
 
-	encodedstr := s.Encode([]string{"hello", "world", "gau#tam"})
+	encodedstr := s.Encode([]string{"hello", "world", "how", "are", "you"})
 	fmt.Println("Encoded String:", encodedstr)
 
 	decodedstrs := s.Decode(encodedstr)
