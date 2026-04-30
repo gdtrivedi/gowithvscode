@@ -14,11 +14,14 @@ func DequeTest() {
 	deq.PushBack(10)
 	deq.PushBack(20)
 	deq.PushBack(30)
+	deq.PushFront(5)
 
 	fmt.Println(deq.Len())
 	for e := deq.Front(); e != nil; e = e.Next() {
 		// do something with e.Value
 		fmt.Println(e.Value)
 	}
+
+	fmt.Println(deq.Len())
 
 }

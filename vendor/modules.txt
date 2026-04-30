@@ -1,0 +1,9 @@
+# github.com/emirpasic/gods v1.18.1
+## explicit; go 1.2
+github.com/emirpasic/gods/containers
+github.com/emirpasic/gods/lists
+github.com/emirpasic/gods/lists/arraylist
+github.com/emirpasic/gods/utils
+# github.com/gammazero/deque v1.2.0
+## explicit; go 1.23
+github.com/gammazero/deque
