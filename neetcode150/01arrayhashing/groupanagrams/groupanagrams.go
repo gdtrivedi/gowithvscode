@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-	// strs := []string{"act", "hat"}
-	// strs := []string{"act", "pots", "tops", "cat", "stop", "hat"}
-	strs := []string{"ac", "c"}
-	// strs := []string{"duh", "ill"}
+	//strs := []string{"act", "hat"}
+	strs := []string{"act", "pots", "tops", "cat", "stop", "hat"}
+	//strs := []string{"ac", "c"}
+	//strs := []string{"duh", "ill"}
 	fmt.Println(groupAnagrams(strs))
 }
 

@@ -2,13 +2,45 @@ package main
 
 import (
 	"fmt"
+	"github.com/emirpasic/gods/maps/treemap"
 	"sort"
 )
 
 func main() {
-	a := []int{1, 2, 2, 3, 3, 3}
+	a := []int{1, 2, 2, 3, 3, 3, 7, 9, 8, 5, 5, 7, 8, 9, 7, 8, 9, 9}
 	k := 3
 	fmt.Println(topKFrequent(a, k))
+	fmt.Println(topKFrequent1(a, k))
+}
+
+func topKFrequent1(nums []int, k int) []int {
+	tm := treemap.NewWithIntComparator() // empty (keys are of type int)
+
+	m := make(map[int]int, 0)
+
+	// iterate through nums and put in map with counter
+	for _, n := range nums {
+		m[n] = m[n] + 1
+	}
+
+	for k, v := range m {
+		tm.Put(v, k)
+	}
+
+	newk := min(tm.Size(), k)
+	if newk == 0 {
+		return []int{}
+	}
+
+	res := []int{}
+	it := tm.Iterator()
+	for it.End(); it.Prev(); {
+		res = append(res, it.Value().(int))
+		if newk == len(res) {
+			break
+		}
+	}
+	return res
 }
 
 func topKFrequent(nums []int, k int) []int {
